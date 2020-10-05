@@ -9,7 +9,7 @@ create the compilers repository and specify your dependencies.
 ```
 git_repository(
     name = "mxebzl",
-    remote = "https://github.com/cfrantz/mxebzl.git",
+    remote = "https://github.com/skykying/mingw-bzl.git",
     tag = "20181103_RC02",  # Adjust as needed
 )
 
