@@ -22,5 +22,5 @@ pkg_winzip(
         # Any additional content you want to combine into your package
         # (e.g. "@mxebzl//runtime/python37")
     ],
-    out = "whatever.zip", # Optional: defaults to ${name}.zip
+    #out = "whatever.zip", # Optional: defaults to ${name}.zip
 )

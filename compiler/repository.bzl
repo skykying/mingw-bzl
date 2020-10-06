@@ -45,7 +45,7 @@ _mxe_compiler = repository_rule(
         ),
         "downloader_py": attr.label(
             doc = "MXE downloader script.",
-            default=Label("@mxebzl//tools:downloader.py"),
+            default=Label("@mxebzl//tools:downloader"),
             allow_files=True
         ),
         "python2": attr.string(default="/usr/bin/python2"),

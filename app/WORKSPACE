@@ -4,7 +4,7 @@ load('@bazel_tools//tools/build_defs/repo:git.bzl', 'git_repository')
 git_repository(
     name = "mxebzl",
     remote = "https://github.com/skykying/mingw-bzl.git",
-    tag = "2020_10_06_rc1",  # Adjust as needed
+    commit = "bd002e752f45f48ee12c238837fed1c5b621ec1e",  # Adjust as needed
 )
 
 load("@mxebzl//compiler:repository.bzl", "mxe_compiler")
