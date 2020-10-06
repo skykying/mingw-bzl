@@ -10,10 +10,10 @@ create the compilers repository and specify your dependencies.
 git_repository(
     name = "mxebzl",
     remote = "https://github.com/skykying/mingw-bzl.git",
-    tag = "20181103_RC02",  # Adjust as needed
+    tag = "2020_10_06_rc1",  # Adjust as needed
 )
 
-load("@mxebzl//tools:repository.bzl", "mxe_compilers")
+load("@mxebzl//compiler:repository.bzl", "mxe_compilers")
 mxe_compilers(
     deps = [
         "compiler",
@@ -29,8 +29,7 @@ cpu architecture:
 
 ```
 $ bazel build \
-    --crosstool_top=@mxebzl//tools/windows:toolchain
-    --cpu=win64 # or win32
+    --crosstool_top=@mxebzl//compiler:win64_toolchain \
     :hello_world
 ```
 
@@ -54,7 +53,7 @@ In your BUILD file:
 
 ```
 package(default_visibility = ['//visibility:public'])
-load("@mxebzl//tools/windows:rules.bzl", "pkg_winzip")
+load("@mxebzl//tools:rules.bzl", "pkg_winzip")
 
 cc_binary(
     name = 'hello',
@@ -86,8 +85,7 @@ configuration when you build the package archive:
 
 ```
 $ bazel build \
-    --crosstool_top=@mxebzl//tools/windows:toolchain
-    --cpu=win64 # or win32
+    --crosstool_top=@mxebzl//compiler:toolchain \
     :hello-windows
 ```
 
