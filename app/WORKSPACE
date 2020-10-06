@@ -7,8 +7,8 @@ git_repository(
     tag = "2020_10_06_rc1",  # Adjust as needed
 )
 
-load("@mxebzl//compiler:repository.bzl", "mxe_compilers")
-mxe_compilers(
+load("@mxebzl//compiler:repository.bzl", "mxe_compiler")
+mxe_compiler(
     deps = [
         "compiler",
         # "SDL2",
